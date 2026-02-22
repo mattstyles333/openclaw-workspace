@@ -81,4 +81,29 @@ domain-finder spex4less --rounds 3 --desc "online glasses retailer"
 
 ---
 
+## Spex4Less Product Pipeline
+
+**Location:** `/root/supplier_scraper/` & `/root/product_upload/`  
+**Source:** `gitlab.s4l.link/internal/supplier_scraper` & `gitlab.s4l.link/internal/product_upload`  
+**Use:** Scrape eyewear suppliers → upload to Magento 2  
+**Agent:** `spex-pipeline` (specialized agent available)
+
+**Workflow:**
+```bash
+# 1. Scrape supplier data
+scrape --supplier marcolin --output ./data/
+
+# 2. Prepare & upload to M2
+m2upload supplier marcolin
+m2upload reconcile compare marcolin
+m2upload m2 upload marcolin
+```
+
+**Supported Suppliers:** Inspecs, Kering, Marcolin, Maui Jim  
+**Aliases:** `scrape`, `m2upload` (added to ~/.bashrc)
+
+**Installed:** 2026-02-22
+
+---
+
 Add whatever helps you do your job. This is your cheat sheet.
