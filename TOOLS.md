@@ -106,4 +106,30 @@ m2upload m2 upload marcolin
 
 ---
 
+## Wiki.js Knowledge Base
+
+**URL:** https://wiki.s4l.link  
+**API Key:** Configured in `.wiki_js_config.json`  
+**CLI:** `wiki` (custom Python tool)  
+**Use:** Manage Spex4Less documentation, SOPs, process docs
+
+**Commands:**
+```bash
+wiki pages list                    # List all pages
+wiki pages get <id>                # Get page content
+wiki pages search <query>          # Search wiki
+```
+
+**Examples:**
+```bash
+wiki pages list                    # 35 pages currently
+wiki pages search "stock"          # Find inventory docs
+wiki pages get 26                  # Read C.R.I.S.P.Y doc
+```
+
+**Location:** `/root/.openclaw/workspace/skills/wiki-js/`  
+**Installed:** 2026-02-22
+
+---
+
 Add whatever helps you do your job. This is your cheat sheet.
