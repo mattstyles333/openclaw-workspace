@@ -1,0 +1,11 @@
+{
+  "name": "website-builder",
+  "description": "Build, test, and deploy websites via GitHub Pages with Tailwind CSS",
+  "version": "1.0.0",
+  "author": "vex",
+  "tags": ["web", "deployment", "github-pages", "tailwind", "frontend"],
+  "requires": {
+    "bins": ["gh", "git"],
+    "skills": ["coding-agent", "qa-tester", "github"]
+  }
+}
