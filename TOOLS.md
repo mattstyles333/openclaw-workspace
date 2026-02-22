@@ -41,4 +41,44 @@
 
 ---
 
+## ElevenLabs API Key
+
+**Key:** `sk_8f67aa6f7a037d91fef135299aaf90957258d4f27b865695`  
+**Provider:** ElevenLabs (TTS + Scribe STT)  
+**Use:** Voice synthesis & speech-to-text  
+**Store:** Environment variable `ELEVENLABS_API_KEY` (add to shell profile)
+
+*Provided: 2026-02-22*
+
+---
+
+## GitLab Token (Self-Hosted)
+
+**Host:** gitlab.s4l.link  
+**Token:** `glpat-g1Bi2NWiNqbrWYALuvu-7W86MQp1OjIH.01.0w1jvn6ay`  
+**CLI:** `glab`  
+**Use:** GitLab API operations, repo management, CI/CD  
+**Store:** Environment variable `GITLAB_TOKEN` or `glab auth login`
+
+*Provided: 2026-02-22*
+
+---
+
+## Domain Finder CLI
+
+**Location:** `/root/domain-finder/`  
+**Source:** `gitlab.s4l.link/matt/domain-finder`  
+**Use:** AI-powered domain name search with availability checking  
+**Run:** `domain-finder <keyword> [--rounds N] [--desc "description"]`  
+**Alias:** `domain-finder` (added to ~/.bashrc)
+
+**Example:**
+```bash
+domain-finder spex4less --rounds 3 --desc "online glasses retailer"
+```
+
+**Installed:** 2026-02-22
+
+---
+
 Add whatever helps you do your job. This is your cheat sheet.
