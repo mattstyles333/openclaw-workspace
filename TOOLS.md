@@ -1,18 +1,44 @@
-## API Keys & Secrets
+## API Keys & Secrets (1Password)
 
-**OpenAI API Key**: Configured as environment variable `OPENAI_API_KEY`
-- Provided: 2026-02-20
-- Store in: Environment variable (not in files for security)
-- To set permanently, add to your shell profile (~/.bashrc, ~/.zshrc, etc.)
+All secrets are now stored in **1Password** (vault: `claw`). Use `op` CLI to retrieve them securely.
 
-**SigNoz API Key**: `FS3pXDYQsAbBUAvJeOMxiPbXcVJSRafe8rpKjb12cx8=`
-- URL: https://logs.s4l.link
-- Provided: 2026-02-20
-- Store in: Environment variable `SIGNOZ_API_KEY` (add to shell profile)
+### Service Account Token
+Stored at: `/root/.openclaw/.op_service_account_token`
 
-**Context7 API Key**: `ctx7sk-86bac2d2-6c75-4b71-804d-42e149515427`
-- Provided: 2026-02-22 (Matt)
-- Usage: Context7 docs fetching (direct API or MCP auth)
+### Available Secrets
+
+| Secret | 1Password Item | Access Command |
+|--------|---------------|----------------|
+| **OpenAI API** | `OpenAI API` | `op item get "OpenAI API" --vault=claw --field="API Key"` |
+| **SigNoz API** | `SigNoz API` | `op item get "SigNoz API" --vault=claw --field="API Key"` |
+| **Context7 API** | `Context7 API` | `op item get "Context7 API" --vault=claw --field="API Key"` |
+| **ElevenLabs API** | `ElevenLabs API` | `op item get "ElevenLabs API" --vault=claw --field="API Key"` |
+| **PostgreSQL** | `PostgreSQL (External)` | `op item get "PostgreSQL (External)" --vault=claw --field="password"` |
+| **GitLab Token** | `GitLab (Self-Hosted)` | `op item get "GitLab (Self-Hosted)" --vault=claw --field="Token"` |
+| **Wiki.js API** | `Wiki.js API` | `op item get "Wiki.js API" --vault=claw --field="API Key"` |
+| **Gmail API** | `Gmail API (matt@spex4less.com)` | `op item get "Gmail API (matt@spex4less.com)" --vault=claw --field="Access Token"` |
+| **OpenRouter API** | `OpenRouter API` | `op item get "OpenRouter API" --vault=claw --field="API Key"` |
+| **Magento API** | `Magento API` | `op item get "Magento API" --vault=claw --field="API Key"` |
+| **AWS Credentials** | `AWS Credentials` | `op item get "AWS Credentials" --vault=claw --field="Secret Access Key"` |
+
+### Usage Examples
+
+```bash
+# Export service account token
+export OP_SERVICE_ACCOUNT_TOKEN=$(cat /root/.openclaw/.op_service_account_token)
+
+# Get OpenAI API key
+export OPENAI_API_KEY=$(op item get "OpenAI API" --vault=claw --field="API Key")
+
+# Get PostgreSQL password
+export PGPASSWORD=$(op item get "PostgreSQL (External)" --vault=claw --field="password")
+
+# Run command with injected secrets
+op run --env-file=/dev/stdin -- python3 script.py <<EOF
+OPENAI_API_KEY=op://claw/OpenAI API/API Key
+SIGNOZ_API_KEY=op://claw/SigNoz API/API Key
+EOF
+```
 
 ## Tailscale Network
 
@@ -28,41 +54,6 @@
 
 ---
 
-
-## PostgreSQL Database (External)
-
-**Host:** 81.150.36.20  
-**Port:** 5432  
-**Database:** mydatabase  
-**User:** readonly  
-**Password:** `rD9mK2pL7vX4nQ8wE5cJ3hA6bF1gY9zT`  
-
-*Provided: 2026-02-22*
-
----
-
-## ElevenLabs API Key
-
-**Key:** `sk_8f67aa6f7a037d91fef135299aaf90957258d4f27b865695`  
-**Provider:** ElevenLabs (TTS + Scribe STT)  
-**Use:** Voice synthesis & speech-to-text  
-**Store:** Environment variable `ELEVENLABS_API_KEY` (add to shell profile)
-
-*Provided: 2026-02-22*
-
----
-
-## GitLab Token (Self-Hosted)
-
-**Host:** gitlab.s4l.link  
-**Token:** `glpat-g1Bi2NWiNqbrWYALuvu-7W86MQp1OjIH.01.0w1jvn6ay`  
-**CLI:** `glab`  
-**Use:** GitLab API operations, repo management, CI/CD  
-**Store:** Environment variable `GITLAB_TOKEN` or `glab auth login`
-
-*Provided: 2026-02-22*
-
----
 
 ## Domain Finder CLI
 
