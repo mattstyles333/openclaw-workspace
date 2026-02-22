@@ -1,0 +1,53 @@
+# Environment & Secrets
+.env
+.env.*
+*.env
+
+# Config files with credentials
+.spotify_config.json
+.twitter_config.json
+.signoz_config.json
+.posthog_config.json
+.cloudflare_config.json
+.db_config.json
+.gmail_client_secret.json
+.gmail_matt_client_secret.json
+
+# OpenClaw auth
+.openclaw/
+.clawhub/
+
+# Backups (may contain sensitive data)
+backups/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Node modules (if any)
+node_modules/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temp files
+*.tmp
+*.swp
+*~
+
+# Screenshot outputs (can be regenerated)
+*.png
+!docs/**/*.png
+
+# Large data files
+*.jsonl
+*.csv
+*.xlsx
