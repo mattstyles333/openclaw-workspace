@@ -1,0 +1,10 @@
+{
+  "name": "wiki-js",
+  "description": "Manage Wiki.js knowledge base via GraphQL API",
+  "version": "1.0.0",
+  "author": "vex",
+  "tags": ["wiki", "documentation", "knowledge-base", "graphql"],
+  "requires": {
+    "bins": ["curl", "jq"]
+  }
+}
