@@ -1,0 +1,11 @@
+{
+  "name": "spex4less-product-pipeline",
+  "description": "Orchestrate Spex4Less product data pipeline: scrape suppliers → validate → upload to Magento 2",
+  "version": "1.0.0",
+  "author": "vex",
+  "tags": ["spex4less", "magento", "product-management", "scraping", "ecommerce"],
+  "requires": {
+    "tools": ["bash", "read", "write", "edit"],
+    "bins": ["python3"]
+  }
+}
