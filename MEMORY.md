@@ -91,4 +91,23 @@ POST /v1/me/player/queue?uri=spotify:track:REAL_URI_HERE
 
 ---
 
-*Last updated: 2026-02-21*
+## Upcoming Travel: Shanghai Optical Fair (March 2026)
+
+**Matt is traveling to Shanghai for the 24th China (Shanghai) International Optics Fair (SIOF 2026)**
+
+- **Dates:** March 2-4, 2026
+- **Event:** SIOF 2026 — major optical industry exhibition in Asia
+- **Venue:** Shanghai New International Expo Centre (SNIEC), Pudong district
+- **Flight:** FlySharp, Reference SIRHGW, Invoice #577842
+  - Booked: January 27, 2026
+  - Name correction pending: Jacqueline (not Jacqeuline)
+- **Hotel:** Yuan · Smart Hotel
+  - Location: Shanghai Pudong Lujiazui Finance and Trade Zone
+  - Near Beiyangjing Subway Station
+
+**Relevance to Spex4Less:**
+This is a business trip for sourcing eyewear suppliers, networking with optical industry contacts, and exploring new product opportunities for Spex4Less.
+
+---
+
+*Last updated: 2026-02-22*
