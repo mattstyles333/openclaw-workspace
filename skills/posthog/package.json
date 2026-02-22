@@ -1,0 +1,24 @@
+{
+  "name": "openclaw-skill-posthog",
+  "version": "1.0.0",
+  "description": "PostHog Analytics Skill for OpenClaw - Query and analyze product analytics data",
+  "main": "index.js",
+  "bin": {
+    "posthog": "./index.js"
+  },
+  "scripts": {
+    "test": "node index.js help"
+  },
+  "keywords": [
+    "posthog",
+    "analytics",
+    "product-analytics",
+    "openclaw",
+    "skill"
+  ],
+  "author": "OpenClaw",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
